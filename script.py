@@ -4,5 +4,6 @@ import feedparser
 # with youtube_dl.YoutubeDL(ydl_opts) as ydl:
 #     ydl.download(['https://www.youtube.com/watch?v=BaW_jenozKc'])
 
-if __name__ == "main":
+
+if __name__ == "__main__":
     print("Hello")
