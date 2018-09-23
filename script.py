@@ -3,39 +3,46 @@ import feedparser
 # ydl_opts = {}
 # with youtube_dl.YoutubeDL(ydl_opts) as ydl:
 #     ydl.download(['https://www.youtube.com/watch?v=BaW_jenozKc'])
+baseUrl = 'https://www.youtube.com/feeds/videos.xml?channel_id='
 
 techChannels = [
-'https://www.youtube.com/user/LinusTechTips',
-'https://www.youtube.com/user/Jayztwocents',
-'https://www.youtube.com/channel/UCeeFfhMcJa1kjtfZAGskOCA',
-'https://www.youtube.com/user/Techquickie',
-'https://www.youtube.com/user/ChannelSuperFun',
-'https://www.youtube.com/user/MemoryExpress'
+    ('UCXuqSBlHAE6Xw-yeJA0Tunw', 'LinusTechTips'),
+    ('UCkWQ0gDrqOCarmUKmppD7GQ', 'JayzTwoCents'),
+    ('UCeeFfhMcJa1kjtfZAGskOCA', 'TechLinked'),
+    ('UC0vBXGSyV14uvJ4hECDOl0Q', 'TechQuickie'),
+    ('UCBZiUUYeLfS5rIj4TQvgSvA', 'ChannelSuperFun'),
+    ('UCTI1K7wGKCYLzG3xx3Jo_zw', 'MemoryExpress'),
+    ('UCBJycsmduvYEL83R_U4JriQ', 'MKBHD')
 ]
 
 hermitCraft = [
-'https://www.youtube.com/user/ThatMumboJumbo',
-'https://www.youtube.com/user/rendog',
-'https://www.youtube.com/user/ZedaphPlays',
-'https://www.youtube.com/user/AhlViktor'
+    ('UChFur_NwVSbUozOcF_F2kMg', 'Mumbo'),
+    ('UCDpdtiUfcdUCzokpRWORRqA', 'RenDog'),
+    ('UCPK5G4jeoVEbUp5crKJl6CQ', 'Grian'),
+    ('UCPK5G4jeoVEbUp5crKJl6CQ', 'Zedaph'),
+    ('UCZ9x-z3iOnIbJxVpm1rsu2A', 'Iskall'),
+    ('UC32w6uX5qtmUtF4QQQ2PKaQ', 'HermitCraftRecap')
 ]
 
 educational = [
-'https://www.youtube.com/user/msadaghd',
-'https://www.youtube.com/channel/UCKKiQ8Bz3pgiJ7JdqNrQfeQ',
-'https://www.youtube.com/channel/UCu6mSoMNzHQiBIOCkHUa2Aw',
-'https://www.youtube.com/channel/UC2MJylovjrLtsGP0_4UrqrQ',
-'https://www.youtube.com/user/physicswoman',
-'https://www.youtube.com/channel/UCSIvk78tK2TiviLQn4fSHaw',
-'https://www.youtube.com/channel/UC0e3QhIYukixgh5VVpKHH9Q',
-'https://www.youtube.com/user/minutephysics',
-'https://www.youtube.com/channel/UC3KEoMzNz8eYnwBC34RaKCQ'
+    ('UCJ0-OtVpF0wOKEqT2Z1HEtA', 'ElectroBOOM'),
+    ('UCKKiQ8Bz3pgiJ7JdqNrQfeQ', 'ElectroBOOM'),  # Mehditation, 2nd channel
+    ('UCu6mSoMNzHQiBIOCkHUa2Aw', "Cody'sLab"),
+    ('UC2MJylovjrLtsGP0_4UrqrQ', "Cody'sLab"),  # Cody'sBlab, 2nd channel
+    ('UC7DdEm33SyaTDtWYGO2CwdA', 'PhysicsGirl'),
+    ('UCSIvk78tK2TiviLQn4fSHaw', 'UpandAtom'),
+    ('UC0e3QhIYukixgh5VVpKHH9Q', 'CodeBullet'),
+    ('UCUHW94eEFW7hkUMVaZz4eDg', 'MinutePhysics'),
+    ('UC3KEoMzNz8eYnwBC34RaKCQ', 'SimoneGiertz')
 ]
 
 other = [
-'https://www.youtube.com/user/CBC22minutes/videos'
+    ('UCD6GYvOYBBNVm1eGQKUaGCA', 'ThisHourHas22Minutes'),
+    ('UCNkEZxxZeRd6VXMnQV8EX0g', 'LostLandsMusicFestival')
 ]
 
 
 if __name__ == "__main__":
-    print("Hello")
+    for x in techChannels:
+        d = feedparser.parse(baseUrl + 'UCXuqSBlHAE6Xw-yeJA0Tunw')
+        print(d)
